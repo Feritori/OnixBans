@@ -1,0 +1,47 @@
+name: OnixBans
+version: 1.0.0
+main: ru.onixmine.onixbans.OnixBansPlugin
+api-version: '1.21'
+description: Система банов, мутов и киков с логированием в Discord
+
+commands:
+  kick:
+    description: Кикнуть игрока
+    usage: /kick <игрок> [причина]
+    permission: onixbans.kick
+  tempban:
+    description: Временно забанить игрока
+    usage: /tempban <игрок> <время> [причина]
+    permission: onixbans.tempban
+  tempmute:
+    description: Временно замутить игрока
+    usage: /tempmute <игрок> <время> [причина]
+    permission: onixbans.tempmute
+  unmute:
+    description: Снять мут с игрока
+    usage: /unmute <игрок>
+    permission: onixbans.unmute
+  unban:
+    description: Разбанить игрока
+    usage: /unban <игрок>
+    permission: onixbans.unban
+
+permissions:
+  onixbans.kick:
+    description: Право на /kick
+    default: op
+  onixbans.tempban:
+    description: Право на /tempban
+    default: op
+  onixbans.tempmute:
+    description: Право на /tempmute
+    default: op
+  onixbans.unmute:
+    description: Право на /unmute
+    default: op
+  onixbans.unban:
+    description: Право на /unban
+    default: op
+  onixbans.bypass:
+    description: Иммунитет к банам/мутам/кикам
+    default: false

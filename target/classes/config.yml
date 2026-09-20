@@ -1,0 +1,33 @@
+# OnixBans Configuration
+
+# Название сервера (отображается в Discord логах)
+server-name: "OnixMine"
+
+# Discord Webhook логирование
+discord:
+  enabled: true
+  webhook-url: "https://discord.com/api/webhooks/YOUR_WEBHOOK_URL"
+
+# Цвета embed в Discord (decimal)
+# kick=16776960 (жёлтый), ban=16711680 (красный), mute=10197915 (серый)
+# unban=65280 (зелёный), unmute=65280 (зелёный)
+
+# Сообщения игрокам (поддерживаются цветовые коды &)
+messages:
+  kick-screen: "&cВы были кикнуты с сервера.\n&7Причина: &f{reason}"
+  ban-screen: "&cВы временно заблокированы.\n&7Причина: &f{reason}\n&7До: &f{until}"
+  mute-notify: "&cВы были замучены до &f{until}&c.\n&7Причина: &f{reason}"
+  mute-blocked: "&cВы замучены до &f{until}&c. Причина: &f{reason}"
+  unmute-notify: "&aВаш мут был снят."
+  unban-success: "&aИгрок &e{player} &aразбанен."
+  unmute-success: "&aИгрок &e{player} &aразмучен."
+  not-found: "&cИгрок &e{player} &cне найден."
+  no-permission: "&cУ вас нет прав на это действие."
+  bypass: "&cНельзя применить это к данному игроку."
+  already-banned: "&cИгрок &e{player} &cуже забанен."
+  already-muted: "&cИгрок &e{player} &cуже замучен."
+  not-banned: "&cИгрок &e{player} &cне забанен."
+  not-muted: "&cИгрок &e{player} &cне замучен."
+  usage-tempban: "&eИспользование: &f/tempban <игрок> <время> [причина]\n&8Примеры времени: 1h, 30m, 7d, 1d12h"
+  usage-tempmute: "&eИспользование: &f/tempmute <игрок> <время> [причина]\n&8Примеры времени: 1h, 30m, 7d"
+  usage-kick: "&eИспользование: &f/kick <игрок> [причина]"
